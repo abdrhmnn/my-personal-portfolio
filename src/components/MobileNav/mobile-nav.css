@@ -1,0 +1,79 @@
+.mobile-nav{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--white-color);
+  gap: 30px 0;
+  top: 63px;
+  left: 0;
+  width: 100%;
+  padding: 20px 0 20px 15px;
+  transition: .3s;
+}
+
+.mobile-nav nav{
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+}
+
+.mobile-nav nav a {
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+  color: var(--black-color);
+  text-decoration: none;
+  font-weight: 500;
+  width: fit-content;
+  font-size: var(--font-size-p-tablet);
+  padding: 6px;
+  transition: .7s;
+}
+
+.mobile-nav nav a:active {
+  transform: scale(.95);
+  box-shadow: 2px 2px 0 0 var(--black-color);
+}
+
+.mobile-social{
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.mobile-discord, .mobile-linked{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+  padding: 6px;
+  font-size: 1.3em;
+  transition: .7s;
+  color: var(--white-color);
+}
+
+.mobile-discord{
+  background-color: #404EED;
+}
+
+.mobile-linked{
+  background-color: #0A66C2;
+}
+
+.mobile-discord:active, .mobile-linked:active{
+  transform: scale(.95);
+  box-shadow: 2px 2px 0 0 var(--black-color);
+}
+
+.dark-mode{
+  background-color: #374151;
+}
+
+.del-mobile-shadow nav a{
+  border: var(--border-desktop);
+  box-shadow: none;
+}

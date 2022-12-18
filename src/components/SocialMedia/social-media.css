@@ -1,0 +1,126 @@
+.social-media-head{
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0 10px;
+}
+
+.discord, .linked{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+  font-size: 1.5em;
+  transition: .7s;
+  color: var(--white-color);
+}
+
+.discord{
+  background-color: #404EED;
+}
+
+.linked{
+  background-color: #0A66C2;
+}
+
+.discord:active, .linked:active{
+  transform: scale(.95);
+  box-shadow: 2px 2px 0 0 var(--black-color);
+}
+
+.btn-dark-mode{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+  font-size: 1.5em;
+  transition: .7s;
+  cursor: pointer;
+}
+
+.btn-dark-mode:active{
+  transform: scale(.95);
+  box-shadow: 2px 2px 0 0 var(--black-color);
+}
+
+.hamburger-menu{
+  display: none;
+}
+
+.del-shadow{
+  border: 1px solid #555555ce;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  box-shadow: none;
+}
+
+.del-discord-shadow, .del-linked-shadow{
+  border: var(--border-desktop);
+  box-shadow: none;
+}
+
+/* responsive breakpoints */
+/* for tablet view */
+@media screen and (max-width: 992px) {
+  .discord, .linked{
+    padding: 6px;
+    font-size: 1.3em;
+  }
+
+  .btn-dark-mode{
+    font-size: 1.3em;
+  }
+}
+
+/* for mobile view */
+@media screen and (max-width: 576px) {
+  .hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px 0;
+    padding: 9px;
+    border-radius: 5px;
+    border: var(--border-desktop);
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow-desktop);
+    transition: .7s;
+  }
+
+  .hamburger-menu:hover{
+    cursor: pointer;
+  }
+
+  .hamburger-menu:active{
+    transform: scale(.95);
+    box-shadow: 2px 2px 0 0 var(--black-color);
+  }
+
+  .hamburger-menu div{
+    width: 16px;
+    height: 2px;
+    background-color: var(--black-color);
+  }
+
+  .discord, .linked{
+    display: none;
+  }
+
+  .btn-dark-mode{
+    font-size: 1.2em;
+  }
+
+  .del-hamburger-shadow{
+    border: var(--border-desktop);
+    box-shadow: none;
+  }
+}
