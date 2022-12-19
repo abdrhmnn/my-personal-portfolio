@@ -1,0 +1,125 @@
+.wrap-my-skills{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+.wrap-my-skills h3{
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.grid-skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-areas: 
+  "js html css java"
+  "js nodejs nodejs mysql"
+  "react react material redux"
+  ;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.wrap-js, .wrap-java, .wrap-css, .wrap-html, .wrap-material, .wrap-mysql, .wrap-nodejs, .wrap-react, .wrap-redux{
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
+  width: 110px;
+}
+
+.wrap-js{
+  grid-area: js;
+}
+
+.wrap-java{
+  grid-area: java;
+}
+
+.wrap-css{
+  grid-area: css;
+}
+
+.wrap-html{
+  grid-area: html;
+}
+
+.wrap-material{
+  grid-area: material;
+}
+
+.wrap-mysql{
+  grid-area: mysql;
+}
+
+.wrap-nodejs{
+  grid-area: nodejs;
+}
+
+.wrap-react{
+  grid-area: react;
+}
+
+.wrap-redux{
+  grid-column: span 2;
+  grid-area: redux;
+}
+
+.wrap-sk-dark h3{
+  color: var(--white-color);
+}
+
+.grid-sk-dark div {
+  border: var(--border-desktop);
+  box-shadow: none;
+}
+
+/* responsive breakpoints */
+/* for tablet view */
+@media screen and (max-width: 992px) {
+  .wrap-my-skills h3{
+    font-size: 2.4em;
+  }
+
+  .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
+    width: 90px;
+  }
+}
+
+/* for mobile view */
+@media screen and (max-width: 576px) {
+  .wrap-my-skills h3{
+    font-size: 2.2em;
+  }
+
+  .grid-skills{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "js"
+    "react"
+    "html"
+    "css"
+    "java"
+    "mysql"
+    "nodejs"
+    "material"
+    "redux"
+    ;
+    margin-top: 30px;
+    gap: 20px 0;
+  }
+
+  .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
+    width: 80px;
+  }
+}

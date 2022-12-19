@@ -1,0 +1,189 @@
+.wrap-jumbotron{
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 0 40px;
+  padding: 0 20px 0 20px;
+}
+
+.jumbotron-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px 0;
+}
+
+.jumbotron-title h2{
+  font-weight: 500;
+  font-size: 4em;
+}
+
+.jumbotron-title p {
+  font-weight: 300;
+}
+
+.btn-cv{
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  width: fit-content;
+  font-weight: 500;
+  font-size: var(--font-size-h4-desktop);
+  padding: 7px;
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.btn-cv:active {
+  transform: scale(.95);
+  box-shadow: 2px 2px 0 0 var(--black-color);
+}
+
+.jumbotron-animasi{
+  width: 50%;
+  position: relative;
+}
+
+.jumbotron-animasi img:nth-child(1){
+  transition: .3s;
+  width: 500px;
+  height: 500px;
+}
+
+.js, .java, .sc{
+  width: 55px;
+  height: 55px;
+  padding: 7px;
+  border-radius: 5px;
+  border: var(--border-desktop);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-desktop);
+}
+
+.js{
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  animation: bounce 2s linear infinite;
+}
+
+.java{
+  position: absolute;
+  top: 140px;
+  right: 100px;
+  animation: bounce2 2s linear infinite;
+}
+
+.sc{
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  animation: bounce3 2s linear infinite;
+}
+
+.jumbotron-dark-mode{
+  color: var(--white-color);
+}
+
+.btn-dark-jumbotron{
+  border: var(--border-desktop);
+  box-shadow: none;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bounce2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes bounce3 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* responsive breakpoints */
+/* for tablet view */
+@media screen and (max-width: 992px) {
+  .wrap-jumbotron{
+    gap: 0 20px;
+  }
+
+  .jumbotron-animasi img:nth-child(1){
+    width: 300px;
+    height: 300px;
+  }
+
+  .js, .java, .sc{
+    width: 45px;
+    height: 45px;
+  }
+
+  .js{
+    top: 50px;
+    left: 100px;
+  }
+
+  .java{
+    top: 140px;
+    right: 30px;
+  }
+
+  .sc{
+    top: 130px;
+    left: 20px;
+  }
+
+  .jumbotron-title h2{
+    font-weight: 500;
+    font-size: 2em;
+  }
+  
+  .jumbotron-title p {
+    font-size: var(--font-size-p-tablet);
+    font-weight: 300;
+  }
+  
+  .btn-cv{
+    font-size: var(--font-size-p-tablet);
+  }
+}
+
+/* for mobile view */
+@media screen and (max-width: 576px) {
+  .jumbotron-animasi{
+    display: none;
+  }
+
+  .wrap-jumbotron{
+    gap: 0 0;
+  }
+  
+  .jumbotron-title{
+    margin-top: 50px;
+  }
+  
+  .jumbotron-title h2{
+    font-weight: 500;
+    font-size: 2em;
+  }
+}

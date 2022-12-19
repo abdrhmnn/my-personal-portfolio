@@ -24,6 +24,7 @@ export default function Header({ toggleDarkMode, SetToggleDarkMode }) {
 					: "header"
 			}
 		>
+			<div className="grad-bar"></div>
 			<div className="wrap-header">
 				<h4>Abdurrahman</h4>
 				<Navbar toggleDarkMode={toggleDarkMode} />
