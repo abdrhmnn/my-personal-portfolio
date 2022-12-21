@@ -9,7 +9,7 @@
   --border-desktop: 1px solid #303030ce;
   --box-shadow-desktop: 4px 4px 0 0 var(--black-color);
   --m-i: linear-gradient(#000, #000);
- --m-o: content-box, padding-box;
+  --m-o: content-box, padding-box;
 }
 
 *{

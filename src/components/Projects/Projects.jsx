@@ -5,15 +5,6 @@ import { IoLogoGithub } from "react-icons/io";
 import { FiExternalLink } from "react-icons/fi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import Modal from "react-modal";
-import quote from "../../assets/img/quote-1.png";
-import markdown from "../../assets/img/markdown-1.png";
-import qr from "../../assets/img/qr-1.png";
-import react from "../../assets/img/react.png";
-import redux from "../../assets/img/redux.png";
-import sass from "../../assets/img/sass.png";
-import html5 from "../../assets/img/html5.png";
-import javascript from "../../assets/img/javascript.png";
-import tailwind from "../../assets/img/tailwind.png";
 import "./projects.css";
 
 export default function Projects({ toggleDarkMode }) {
@@ -22,6 +13,7 @@ export default function Projects({ toggleDarkMode }) {
 	const [techStack, setTechStack] = useState([]);
 	const [dataModal, setDataModal] = useState(null);
 	const [dataIdModal, setDataIdModal] = useState(null);
+	const [selectedTabsProjects, setSelectedTabsProjects] = useState(0);
 
 	const customStyles = {
 		overlay: {
@@ -42,20 +34,30 @@ export default function Projects({ toggleDarkMode }) {
 
 	Modal.setAppElement("#root");
 
-	function openModal(index, id) {
-		setDataIdModal(index);
-		switch (index) {
-			case 0:
-				setTechStack((techStack) => [react, redux, sass]);
-				setImgName(quote);
-				break;
+	function openModal(id) {
+		// console.log(id);
+		// console.log(index);
+		const dataId = dataProjects.find((e, i) => e.id === id);
+
+		setDataIdModal(id);
+		switch (id) {
 			case 1:
-				setTechStack((techStack) => [react, redux, sass]);
-				setImgName(markdown);
+				if (dataId.id === id) {
+					setTechStack(dataId.techStack);
+					setImgName(dataId.imgName);
+				}
 				break;
 			case 2:
-				setTechStack((techStack) => [html5, javascript, tailwind]);
-				setImgName(qr);
+				if (dataId.id === id) {
+					setTechStack(dataId.techStack);
+					setImgName(dataId.imgName);
+				}
+				break;
+			case 3:
+				if (dataId.id === id) {
+					setTechStack(dataId.techStack);
+					setImgName(dataId.imgName);
+				}
 				break;
 			default:
 				setImgName(null);
@@ -69,9 +71,9 @@ export default function Projects({ toggleDarkMode }) {
 		setIsOpen(false);
 	}
 
-	function createDeskripsiModal(el, index) {
+	function createDeskripsiModal(el) {
 		switch (dataIdModal) {
-			case 0:
+			case 1:
 				return (
 					<TabPanel>
 						<div className="modal-desc-panel">
@@ -93,7 +95,7 @@ export default function Projects({ toggleDarkMode }) {
 						</div>
 					</TabPanel>
 				);
-			case 1:
+			case 2:
 				return (
 					<TabPanel>
 						<div className="modal-desc-panel">
@@ -114,7 +116,7 @@ export default function Projects({ toggleDarkMode }) {
 						</div>
 					</TabPanel>
 				);
-			case 2:
+			case 3:
 				return (
 					<TabPanel>
 						<div className="modal-desc-panel">
@@ -140,101 +142,271 @@ export default function Projects({ toggleDarkMode }) {
 		}
 	}
 
+	const showTabsProjectsPanel = () => {
+		const appsProjects = dataProjects.filter((e) => e.kategori === "apps");
+		const desainProjects = dataProjects.filter((e) => e.kategori === "desain");
+
+		switch (selectedTabsProjects) {
+			case 0:
+				return (
+					<TabPanel>
+						<div className="grid-card-app">
+							{dataProjects.map((e, i) => {
+								return (
+									<div className="card-app" key={i}>
+										<div className="date-app">
+											<p>{e.date}</p>
+											<div className="link-app">
+												<a href={e.github} target="_blank" rel="noreferrer">
+													<IoLogoGithub />
+												</a>
+												<a href={e.link} target="_blank" rel="noreferrer">
+													<FiExternalLink />
+												</a>
+											</div>
+										</div>
+										<p>{e.nama}</p>
+										<p>{e.desc}</p>
+										<p onClick={() => openModal(e.id)}>Lihat detail</p>
+										<Modal
+											isOpen={modalIsOpen}
+											onRequestClose={closeModal}
+											style={customStyles}
+											contentLabel="Detail App"
+										>
+											<div className="modal-content">
+												<div className="close-btn" onClick={closeModal}>
+													<AiOutlineCloseCircle />
+												</div>
+												<div className="grid-modal-content">
+													<div className="modal-img-tech">
+														<div className="modal-img">
+															<img src={imgName} alt="Contoh Gambar" />
+														</div>
+														<div className="modal-tech">
+															<p>Teknologi Stack : </p>
+															<div className="flex-img">
+																{techStack.map((e, i) => {
+																	return <img src={e} alt="Stack Teknologi" key={i} />;
+																})}
+															</div>
+														</div>
+													</div>
+													<div className="modal-desc">
+														{dataModal &&
+															dataModal.map((e, i) => {
+																return (
+																	<Tabs
+																		selectedTabClassName="select-tabs"
+																		className="modal-tabs"
+																		focusTabOnClick={false}
+																		key={i}
+																	>
+																		<TabList className="modal-tabs-head">
+																			<Tab>Deskripsi</Tab>
+																			<Tab>Timeline</Tab>
+																		</TabList>
+
+																		{createDeskripsiModal(e)}
+																		<TabPanel>
+																			<div className="abdu">
+																				<h2>Still doesn't work! 🐱‍💻</h2>
+																			</div>
+																		</TabPanel>
+																	</Tabs>
+																);
+															})}
+													</div>
+												</div>
+											</div>
+										</Modal>
+									</div>
+								);
+							})}
+						</div>
+					</TabPanel>
+				);
+			case 1:
+				return (
+					<TabPanel>
+						<div className="grid-card-app">
+							{appsProjects.map((e, i) => {
+								return (
+									<div className="card-app" key={i}>
+										<div className="date-app">
+											<p>{e.date}</p>
+											<div className="link-app">
+												<a href={e.github} target="_blank" rel="noreferrer">
+													<IoLogoGithub />
+												</a>
+												<a href={e.link} target="_blank" rel="noreferrer">
+													<FiExternalLink />
+												</a>
+											</div>
+										</div>
+										<p>{e.nama}</p>
+										<p>{e.desc}</p>
+										<p onClick={() => openModal(e.id)}>Lihat detail</p>
+										<Modal
+											isOpen={modalIsOpen}
+											onRequestClose={closeModal}
+											style={customStyles}
+											contentLabel="Detail App"
+										>
+											<div className="modal-content">
+												<div className="close-btn" onClick={closeModal}>
+													<AiOutlineCloseCircle />
+												</div>
+												<div className="grid-modal-content">
+													<div className="modal-img-tech">
+														<div className="modal-img">
+															<img src={imgName} alt="Contoh Gambar" />
+														</div>
+														<div className="modal-tech">
+															<p>Teknologi Stack : </p>
+															<div className="flex-img">
+																{techStack.map((e, i) => {
+																	return <img src={e} alt="Stack Teknologi" key={i} />;
+																})}
+															</div>
+														</div>
+													</div>
+													<div className="modal-desc">
+														{dataModal &&
+															dataModal.map((e, i) => {
+																return (
+																	<Tabs
+																		selectedTabClassName="select-tabs"
+																		className="modal-tabs"
+																		focusTabOnClick={false}
+																		key={i}
+																	>
+																		<TabList className="modal-tabs-head">
+																			<Tab>Deskripsi</Tab>
+																			<Tab>Timeline</Tab>
+																		</TabList>
+
+																		{createDeskripsiModal(e, i)}
+																		<TabPanel>
+																			<div className="abdu">
+																				<h2>Still doesn't work! 🐱‍💻</h2>
+																			</div>
+																		</TabPanel>
+																	</Tabs>
+																);
+															})}
+													</div>
+												</div>
+											</div>
+										</Modal>
+									</div>
+								);
+							})}
+						</div>
+					</TabPanel>
+				);
+			case 2:
+				return (
+					<TabPanel>
+						<div className="grid-card-app">
+							{desainProjects.map((e, i) => {
+								return (
+									<div className="card-app" key={i}>
+										<div className="date-app">
+											<p>{e.date}</p>
+											<div className="link-app">
+												<a href={e.github} target="_blank" rel="noreferrer">
+													<IoLogoGithub />
+												</a>
+												<a href={e.link} target="_blank" rel="noreferrer">
+													<FiExternalLink />
+												</a>
+											</div>
+										</div>
+										<p>{e.nama}</p>
+										<p>{e.desc}</p>
+										<p onClick={() => openModal(e.id)}>Lihat detail</p>
+										<Modal
+											isOpen={modalIsOpen}
+											onRequestClose={closeModal}
+											style={customStyles}
+											contentLabel="Detail App"
+										>
+											<div className="modal-content">
+												<div className="close-btn" onClick={closeModal}>
+													<AiOutlineCloseCircle />
+												</div>
+												<div className="grid-modal-content">
+													<div className="modal-img-tech">
+														<div className="modal-img">
+															<img src={imgName} alt="Contoh Gambar" />
+														</div>
+														<div className="modal-tech">
+															<p>Teknologi Stack : </p>
+															<div className="flex-img">
+																{techStack.map((e, i) => {
+																	return <img src={e} alt="Stack Teknologi" key={i} />;
+																})}
+															</div>
+														</div>
+													</div>
+													<div className="modal-desc">
+														{dataModal &&
+															dataModal.map((e, i) => {
+																return (
+																	<Tabs
+																		selectedTabClassName="select-tabs"
+																		className="modal-tabs"
+																		focusTabOnClick={false}
+																		key={i}
+																	>
+																		<TabList className="modal-tabs-head">
+																			<Tab>Deskripsi</Tab>
+																			<Tab>Timeline</Tab>
+																		</TabList>
+
+																		{createDeskripsiModal(e, i)}
+																		<TabPanel>
+																			<div className="abdu">
+																				<h2>Still doesn't work! 🐱‍💻</h2>
+																			</div>
+																		</TabPanel>
+																	</Tabs>
+																);
+															})}
+													</div>
+												</div>
+											</div>
+										</Modal>
+									</div>
+								);
+							})}
+						</div>
+					</TabPanel>
+				);
+			default:
+				return null;
+		}
+	};
+
 	return (
 		<div className="projects">
 			<div className="wrap-projects">
 				<h3>My Projects</h3>
 				<div className="grid-tabs">
-					<Tabs>
+					<Tabs
+						focusTabOnClick={false}
+						onSelect={(index) => setSelectedTabsProjects(index)}
+					>
 						<TabList className="tabs-head">
 							<Tab>All</Tab>
 							<Tab>Web Apps</Tab>
 							<Tab>Slicing Design</Tab>
 						</TabList>
 
-						<TabPanel>
-							<div className="grid-card-app">
-								{dataProjects.map((e, i) => {
-									return (
-										<div className="card-app" key={i}>
-											<div className="date-app">
-												<p>{e.date}</p>
-												<div className="link-app">
-													<a href={e.github} target="_blank" rel="noreferrer">
-														<IoLogoGithub />
-													</a>
-													<a href={e.link} target="_blank" rel="noreferrer">
-														<FiExternalLink />
-													</a>
-												</div>
-											</div>
-											<p>{e.nama}</p>
-											<p>{e.desc}</p>
-											<p onClick={() => openModal(i, i + 1)}>Lihat detail</p>
-											<Modal
-												isOpen={modalIsOpen}
-												// onAfterOpen={afterOpenModal}
-												onRequestClose={closeModal}
-												style={customStyles}
-												contentLabel="Detail App"
-											>
-												<div className="modal-content">
-													<div className="close-btn" onClick={closeModal}>
-														<AiOutlineCloseCircle />
-													</div>
-													<div className="grid-modal-content">
-														<div className="modal-img-tech">
-															<div className="modal-img">
-																<img src={imgName} alt="Contoh Gambar" />
-															</div>
-															<div className="modal-tech">
-																<p>Teknologi Stack : </p>
-																<div className="flex-img">
-																	{techStack.map((e, i) => {
-																		return <img src={e} alt="Stack Teknologi" key={i} />;
-																	})}
-																</div>
-															</div>
-														</div>
-														<div className="modal-desc">
-															{dataModal &&
-																dataModal.map((e, i) => {
-																	// console.log(e);
-																	return (
-																		<Tabs
-																			selectedTabClassName="select-tabs"
-																			className="modal-tabs"
-																			key={i}
-																		>
-																			<TabList className="modal-tabs-head">
-																				<Tab>Deskripsi</Tab>
-																				<Tab>Timeline</Tab>
-																			</TabList>
-
-																			{createDeskripsiModal(e, i)}
-																			<TabPanel>
-																				<div className="abdu">
-																					<h2>Still doesn't work! 🐱‍💻</h2>
-																				</div>
-																			</TabPanel>
-																		</Tabs>
-																	);
-																})}
-														</div>
-													</div>
-												</div>
-											</Modal>
-										</div>
-									);
-								})}
-							</div>
-						</TabPanel>
-						<TabPanel>
-							<h2>Any content 2</h2>
-						</TabPanel>
-						<TabPanel>
-							<h2>Any content 3</h2>
-						</TabPanel>
+						{showTabsProjectsPanel()}
+						{showTabsProjectsPanel()}
+						{showTabsProjectsPanel()}
 					</Tabs>
 				</div>
 			</div>
