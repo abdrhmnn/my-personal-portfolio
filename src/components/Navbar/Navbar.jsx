@@ -8,13 +8,18 @@ export default function Navbar({ toggleDarkMode }) {
 	};
 
 	const scrollToSkills = () => {
-		document.body.scrollTop = 540;
-		document.documentElement.scrollTop = 540;
+		document.body.scrollTop = 510;
+		document.documentElement.scrollTop = 510;
 	};
 
 	const scrollToProjects = () => {
-		document.body.scrollTop = 1180;
-		document.documentElement.scrollTop = 1180;
+		document.body.scrollTop = 1120;
+		document.documentElement.scrollTop = 1120;
+	};
+
+	const scrollToTentang = () => {
+		document.body.scrollTop = 1895;
+		document.documentElement.scrollTop = 1895;
 	};
 
 	return (
@@ -22,7 +27,7 @@ export default function Navbar({ toggleDarkMode }) {
 			<p onClick={scrollToTop}>Beranda</p>
 			<p onClick={scrollToSkills}>Skills</p>
 			<p onClick={scrollToProjects}>Projects</p>
-			<p>Tentang</p>
+			<p onClick={scrollToTentang}>Tentang</p>
 		</nav>
 	);
 }

@@ -59,6 +59,18 @@ export default function Projects({ toggleDarkMode }) {
 					setImgName(dataId.imgName);
 				}
 				break;
+			case 4:
+				if (dataId.id === id) {
+					setTechStack(dataId.techStack);
+					setImgName(dataId.imgName);
+				}
+				break;
+			case 5:
+				if (dataId.id === id) {
+					setTechStack(dataId.techStack);
+					setImgName(dataId.imgName);
+				}
+				break;
 			default:
 				setImgName(null);
 		}
@@ -133,6 +145,48 @@ export default function Projects({ toggleDarkMode }) {
 								</a>{" "}
 								untuk men-generate URL menjadi QR Code. Dalam pembuatan aplikasi ini saya
 								belajar menggunakan library css Tailwind untuk styling aplikasi.
+							</p>
+						</div>
+					</TabPanel>
+				);
+			case 4:
+				return (
+					<TabPanel>
+						<div className="modal-desc-panel">
+							<h3>{el.nama}</h3>
+							<p className="paragraf-desc">
+								Aplikasi untuk menonton video yang berada di youtube serta bisa mencari
+								video dan filter sesuai kategori yang disediakan, dalam pembuatan aplikasi
+								ini menggunakan public API{" "}
+								<a
+									href="https://rapidapi.com/ytdlfree/api/youtube-v31"
+									target="_blank"
+									rel="noreferrer"
+								>
+									Youtube
+								</a>{" "}
+								dan library react component{" "}
+								<a href="https://mui.com/" target="_blank" rel="noreferrer">
+									MaterialUI
+								</a>
+								. Selama proses pembuatan, saya belajar bagaimana implementasi material ui
+								pada aplikasi react serta mengelola data API.
+							</p>
+						</div>
+					</TabPanel>
+				);
+			case 5:
+				return (
+					<TabPanel>
+						<div className="modal-desc-panel">
+							<h3>{el.nama}</h3>
+							<p className="paragraf-desc">
+								Hasil dari slicing design dari website{" "}
+								<a href="https://www.slidddo.com/" target="_blank" rel="noreferrer">
+									Slidddo
+								</a>
+								, disini saya berlatih untuk mendesain website dengan meniru styling pada
+								website yang sudah ada.
 							</p>
 						</div>
 					</TabPanel>

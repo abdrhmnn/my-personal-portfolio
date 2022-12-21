@@ -22,8 +22,10 @@ export default function SocialMedia({
 	return (
 		<div className="social-media-head">
 			<a
-				href="#discord"
+				href="https://www.discordapp.com/users/runningMan#6778"
 				className={`${toggleDarkMode ? "discord del-discord-shadow" : "discord"}`}
+				target="_blank"
+				rel="noreferrer"
 			>
 				<FaDiscord />
 			</a>

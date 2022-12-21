@@ -1,0 +1,144 @@
+.wrap-tentang{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px 50px 20px;
+}
+
+.wrap-tentang h3{
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.flex-circle{
+  display: flex;
+  gap: 0 7px;
+  margin-bottom: 30px;
+}
+
+.flex-circle div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.merah{
+  background-color: #ff605c;
+}
+
+.kuning{
+  background-color: #ffbd44;
+}
+
+.hijau{
+  background-color: #00ca4e;
+}
+
+.tentang-saya{
+  background-color: #23272F;
+  padding: 20px;
+  margin-top: 25px;
+  color: var(--white-color);
+  border-radius: 8px;
+}
+
+.tentang-saya p {
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+.card-tentang{
+  width: fit-content;
+  margin: 20px auto 0 auto;
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--black-color);
+}
+
+.img-card{
+  display: flex;
+  justify-content: center;
+}
+
+.img-card img{
+  width: 75px;
+  height: 75px;
+}
+
+.card-tentang h3{
+  font-size: 1.1em;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.card-tentang p{
+  font-size: .85em;
+  color: rgb(91, 91, 91);
+}
+
+.social-tentang{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 0 10px;
+}
+
+.wa, .email{
+  font-size: 1.1em;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.728);
+  cursor: pointer;
+}
+
+.wa{
+  background-color: #30EA66;
+}
+
+.email{
+  background-color: #D7483E;
+}
+
+.wa a, .email a{
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.dark-tentang h3{
+  color: var(--white-color);
+}
+
+.dark-tentang-saya{
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.dark-tentang-saya p {
+  font-weight: 400;
+}
+
+.dark-card-tentang{
+  background-color: #23272F;
+}
+
+.dark-card-tentang p{
+  color: rgb(134, 134, 134);
+}
+
+/* responsive breakpoints */
+/* for tablet view */
+@media screen and (max-width: 992px) {
+  .wrap-tentang h3:nth-child(1){
+    font-size: 2.4em;
+  }
+}
+
+/* for mobile view */
+@media screen and (max-width: 576px) {
+  .wrap-tentang h3:nth-child(1){
+    font-size: 2.2em;
+  }
+}

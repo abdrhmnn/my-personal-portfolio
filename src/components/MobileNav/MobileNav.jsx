@@ -17,8 +17,14 @@ export default function MobileNav({ toggleDarkMode, SetToggleHamburgerMenu }) {
 
 	const scrollToProjects = () => {
 		SetToggleHamburgerMenu(false);
-		document.body.scrollTop = 1380;
-		document.documentElement.scrollTop = 1380;
+		document.body.scrollTop = 1365;
+		document.documentElement.scrollTop = 1365;
+	};
+
+	const scrollToTentang = () => {
+		SetToggleHamburgerMenu(false);
+		document.body.scrollTop = 2650;
+		document.documentElement.scrollTop = 2650;
 	};
 
 	return (
@@ -31,14 +37,16 @@ export default function MobileNav({ toggleDarkMode, SetToggleHamburgerMenu }) {
 				<p onClick={scrollToTop}>Beranda</p>
 				<p onClick={scrollToSkills}>Skills</p>
 				<p onClick={scrollToProjects}>Projects</p>
-				<p>Tentang</p>
+				<p onClick={scrollToTentang}>Tentang</p>
 			</nav>
 			<div className="mobile-social">
 				<a
-					href="#discord"
+					href="https://www.discordapp.com/users/runningMan#6778"
 					className={`${
 						toggleDarkMode ? "mobile-discord del-discord-shadow" : "mobile-discord"
 					}`}
+					target="_blank"
+					rel="noreferrer"
 				>
 					<FaDiscord />
 				</a>

@@ -1,11 +1,11 @@
 import React from "react";
 import "./jumbotron.css";
-import animasi from "../../assets/jumbotron-gif.gif";
-import animasiDark from "../../assets/jumbotron-gif-dark.gif";
 import js from "../../assets/img/javascript.png";
 import java from "../../assets/img/java.png";
 import sc from "../../assets/img/source-code.png";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import Lottie from "react-lottie-player";
+import animationData from "../../data/gif-lottie-jumbotron-light";
 
 export default function Jumbotron({ toggleDarkMode }) {
 	return (
@@ -22,14 +22,19 @@ export default function Jumbotron({ toggleDarkMode }) {
 						design, memiliki keinginan untuk terus menggali pengetahuan seputar
 						programming.
 					</p>
-					<button
+					<a
+						href="https://drive.google.com/file/d/1AlVjIVo6NvC7ukCuJRZ6tqz32WLUiYDN/view?usp=sharing"
 						className={`${toggleDarkMode ? "btn-cv btn-dark-jumbotron" : "btn-cv"}`}
+						target="_blank"
+						rel="noreferrer"
 					>
 						<IoDocumentTextOutline /> Lihat CV
-					</button>
+					</a>
 				</div>
 				<div className="jumbotron-animasi">
-					<img src={toggleDarkMode ? animasiDark : animasi} alt="Jumbotron Animasi" />
+					<div className="animasi-lottie">
+						<Lottie loop animationData={animationData} play />
+					</div>
 					<img src={js} alt="Javascript Animasi" className="js" />
 					<img src={java} alt="Java Animasi" className="java" />
 					<img src={sc} alt="Source Code Animasi" className="sc" />

@@ -28,7 +28,8 @@
   gap: 0 5px;
   width: fit-content;
   font-weight: 500;
-  font-size: var(--font-size-h4-desktop);
+  text-decoration: none;
+  color: var(--black-color);
   padding: 7px;
   border-radius: 5px;
   border: var(--border-desktop);
@@ -48,7 +49,7 @@
   position: relative;
 }
 
-.jumbotron-animasi img:nth-child(1){
+.jumbotron-animasi .animasi-lottie{
   transition: .3s;
   width: 500px;
   height: 500px;
@@ -128,23 +129,23 @@
     gap: 0 20px;
   }
 
-  .jumbotron-animasi img:nth-child(1){
+  .jumbotron-animasi .animasi-lottie{
     width: 300px;
     height: 300px;
   }
 
   .js, .java, .sc{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 
   .js{
     top: 50px;
-    left: 100px;
+    left: 80px;
   }
 
   .java{
-    top: 140px;
+    top: 120px;
     right: 30px;
   }
 
