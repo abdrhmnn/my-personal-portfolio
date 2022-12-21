@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 // style
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
 			<Header toggleDarkMode={toggleDarkMode} SetToggleDarkMode={SetToggleDarkMode} />
 			<Jumbotron toggleDarkMode={toggleDarkMode} />
 			<Skills toggleDarkMode={toggleDarkMode} />
+			<Projects toggleDarkMode={toggleDarkMode} />
 		</div>
 	);
 }

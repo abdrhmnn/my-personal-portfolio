@@ -2,7 +2,25 @@ import React from "react";
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 import "./mobile-nav.css";
 
-export default function MobileNav({ toggleDarkMode }) {
+export default function MobileNav({ toggleDarkMode, SetToggleHamburgerMenu }) {
+	const scrollToTop = () => {
+		SetToggleHamburgerMenu(false);
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	};
+
+	const scrollToSkills = () => {
+		SetToggleHamburgerMenu(false);
+		document.body.scrollTop = 245;
+		document.documentElement.scrollTop = 245;
+	};
+
+	const scrollToProjects = () => {
+		SetToggleHamburgerMenu(false);
+		document.body.scrollTop = 1380;
+		document.documentElement.scrollTop = 1380;
+	};
+
 	return (
 		<div
 			className={`${
@@ -10,10 +28,10 @@ export default function MobileNav({ toggleDarkMode }) {
 			}`}
 		>
 			<nav>
-				<a href="#beranda">Beranda</a>
-				<a href="#skills">Skills</a>
-				<a href="#projects">Projects</a>
-				<a href="#tentang">Tentang</a>
+				<p onClick={scrollToTop}>Beranda</p>
+				<p onClick={scrollToSkills}>Skills</p>
+				<p onClick={scrollToProjects}>Projects</p>
+				<p>Tentang</p>
 			</nav>
 			<div className="mobile-social">
 				<a

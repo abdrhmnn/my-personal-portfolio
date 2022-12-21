@@ -35,7 +35,12 @@ export default function Header({ toggleDarkMode, SetToggleDarkMode }) {
 					SetToggleDarkMode={SetToggleDarkMode}
 				/>
 			</div>
-			{toggleHamburgerMenu ? <MobileNav toggleDarkMode={toggleDarkMode} /> : null}
+			{toggleHamburgerMenu ? (
+				<MobileNav
+					toggleDarkMode={toggleDarkMode}
+					SetToggleHamburgerMenu={SetToggleHamburgerMenu}
+				/>
+			) : null}
 		</header>
 	);
 }

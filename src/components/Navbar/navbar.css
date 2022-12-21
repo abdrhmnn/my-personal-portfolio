@@ -4,7 +4,7 @@
   gap: 0 20px;
 }
 
-.navbar a{
+.navbar p{
   padding: 7px;
   border-radius: 5px;
   border: var(--border-desktop);
@@ -15,18 +15,21 @@
   font-weight: 500;
   font-size: var(--font-size-p-desktop);
   transition: .7s;
+  cursor: pointer;
 }
 
-.navbar a:active {
+.navbar p:active {
   transform: scale(.95);
   box-shadow: 2px 2px 0 0 var(--black-color);
 }
 
-.del-navbar-shadow a{
+.del-navbar-shadow p{
   border: var(--border-desktop);
   box-shadow: none;
 }
 
+/* responsive breakpoints */
+/* for tablet view */
 @media screen and (max-width: 992px) {
   .navbar{
     justify-content: center;

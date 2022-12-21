@@ -3,12 +3,8 @@
   top: 0;
   align-items: center;
   transition: .3s;
-  z-index: 1;
+  z-index: 9;
 }
-
-/* .grad-bar{
-  margin-bottom: 20px;
-} */
 
 .wrap-header{
   display: grid;
@@ -17,7 +13,6 @@
   padding: 20px 20px 20px 20px;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  /* padding: 0 0 20px 0; */
 }
 
 .wrap-header h4{

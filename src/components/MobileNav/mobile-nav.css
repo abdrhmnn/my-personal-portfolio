@@ -17,7 +17,7 @@
   gap: 20px 0;
 }
 
-.mobile-nav nav a {
+.mobile-nav nav p {
   border-radius: 5px;
   border: var(--border-desktop);
   background-color: var(--white-color);
@@ -28,10 +28,11 @@
   width: fit-content;
   font-size: var(--font-size-p-tablet);
   padding: 6px;
+  cursor: pointer;
   transition: .7s;
 }
 
-.mobile-nav nav a:active {
+.mobile-nav nav p:active {
   transform: scale(.95);
   box-shadow: 2px 2px 0 0 var(--black-color);
 }
@@ -73,7 +74,7 @@
   background-color: #374151;
 }
 
-.del-mobile-shadow nav a{
+.del-mobile-shadow nav p{
   border: var(--border-desktop);
   box-shadow: none;
 }

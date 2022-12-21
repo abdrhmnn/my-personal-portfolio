@@ -1,0 +1,30 @@
+export const dataProjects = [
+	{
+		id: 1,
+		nama: "Random Quote Machine",
+		desc: "Aplikasi untuk generate quote secara acak dan juga mengubah warna background pada setiap quote baru.",
+		date: "10 Januari 2021",
+		gambar: "quote-1.png",
+		techStack: ["react.png", "redux.png", "sass.png"],
+		link: "https://fe-dev-libraries-projects.netlify.app/",
+		github: "https://github.com/abdrhmnn/fe-dev-libraries-projects",
+	},
+	{
+		id: 2,
+		nama: "Markdown Previewer",
+		desc: "Aplikasi untuk edit markdown yang hasilnya dapat dilihat secara langsung di bagian previewer.",
+		date: "21 Agustus 2021",
+		gambar: "markdown-1.png",
+		link: "https://fe-dev-libraries-projects.netlify.app/",
+		github: "https://github.com/abdrhmnn/fe-dev-libraries-projects",
+	},
+	{
+		id: 3,
+		nama: "QR Code Generator",
+		desc: "Aplikasi untuk generate kode QR berdasarkan URL website yang dimasukkan.",
+		date: "17 Maret 2022",
+		gambar: "qr-1.png",
+		link: "https://qrcode-gent.netlify.app/",
+		github: "https://github.com/abdrhmnn/qr-code-generator",
+	},
+];
