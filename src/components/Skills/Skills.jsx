@@ -1,5 +1,5 @@
 import React from "react";
-import java from "../../assets/img/java.png";
+// import java from "../../assets/img/java.png";
 import javascript from "../../assets/img/javascript.png";
 import css3 from "../../assets/img/css3.png";
 import html5 from "../../assets/img/html5.png";
