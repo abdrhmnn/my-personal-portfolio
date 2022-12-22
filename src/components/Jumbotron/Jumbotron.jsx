@@ -1,7 +1,7 @@
 import React from "react";
 import "./jumbotron.css";
 import js from "../../assets/img/javascript.png";
-import java from "../../assets/img/java.png";
+// import java from "../../assets/img/java.png";
 import sc from "../../assets/img/source-code.png";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import Lottie from "react-lottie-player";
@@ -36,7 +36,7 @@ export default function Jumbotron({ toggleDarkMode }) {
 						<Lottie loop animationData={animationData} play />
 					</div>
 					<img src={js} alt="Javascript Animasi" className="js" />
-					<img src={java} alt="Java Animasi" className="java" />
+					{/* <img src={java} alt="Java Animasi" className="java" /> */}
 					<img src={sc} alt="Source Code Animasi" className="sc" />
 				</div>
 			</div>

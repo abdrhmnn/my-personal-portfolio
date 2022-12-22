@@ -103,6 +103,7 @@
 
 .card-app p:nth-child(3) {
   font-size: .95em;
+  line-height: 21px;
   font-weight: 300;
 }
 

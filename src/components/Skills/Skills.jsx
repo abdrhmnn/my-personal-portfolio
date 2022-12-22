@@ -21,9 +21,9 @@ export default function Skills({ toggleDarkMode }) {
 					<div className="wrap-js">
 						<img src={javascript} alt="Javascript" />
 					</div>
-					<div className="wrap-java">
+					{/* <div className="wrap-java">
 						<img src={java} alt="Java" />
-					</div>
+					</div> */}
 					<div className="wrap-css">
 						<img src={css3} alt="CSS3" />
 					</div>

@@ -43,6 +43,7 @@
 }
 
 .tentang-saya p {
+  line-height: 23px;
   font-weight: 300;
   font-size: 1.1em;
 }

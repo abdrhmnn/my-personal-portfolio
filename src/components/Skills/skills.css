@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-template-areas: 
-  "js html css java"
+  "js html css mysql"
   "js nodejs nodejs mysql"
   "react react material redux"
   ;
@@ -117,7 +117,6 @@
     "react"
     "html"
     "css"
-    "java"
     "mysql"
     "nodejs"
     "material"
