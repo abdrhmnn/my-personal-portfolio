@@ -1,50 +1,61 @@
 .navbar{
   display: flex;
   align-items: center;
-  gap: 0 20px;
+  gap: 0 15px;
 }
 
 .navbar p{
-  padding: 7px;
+  padding: 6px;
   border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
-  box-shadow: var(--box-shadow-desktop);
-  color: var(--black-color);
-  text-decoration: none;
+  border: 1px solid #303030ce;
+  background-color: #FFFFFF;
+  box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
+  color: #232323;
   font-weight: 500;
-  font-size: var(--font-size-p-desktop);
-  transition: .7s;
+  font-size: .9em;
+  transition: .3s;
   cursor: pointer;
 }
 
 .navbar p:active {
   transform: scale(.95);
-  box-shadow: 2px 2px 0 0 var(--black-color);
+  box-shadow: 2px 2px 0 0 #2e2e2e;
 }
 
 .del-navbar-shadow p{
-  border: var(--border-desktop);
+  border: 1px solid #303030ce;
   box-shadow: none;
 }
 
 /* responsive breakpoints */
-/* for tablet view */
-@media screen and (max-width: 992px) {
-  .navbar{
-    justify-content: center;
-    gap: 0 10px;
-  }
-
-  .navbar a{
-    font-size: var(--font-size-p-tablet);
-    padding: 6px;
+/* for desktops (large screens) */
+@media (min-width: 1025px) and (max-width: 1200px){
+  .navbar p{
+    font-size: .85em;
   }
 }
 
-/* for mobile view */
-@media screen and (max-width: 576px) {
+/* for laptops (small screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar p{
+    font-size: .85em;
+  }
+
   .navbar{
+    justify-content: center;
+  }
+}
+
+/* for tablet, iPads */
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* for mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbar {
     display: none;
   }
 }

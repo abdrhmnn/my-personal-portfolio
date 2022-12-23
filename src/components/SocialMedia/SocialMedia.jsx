@@ -51,7 +51,7 @@ export default function SocialMedia({
 				onClick={openMobileNav}
 			>
 				{toggleHamburgerMenu ? (
-					<GrClose />
+					<GrClose size="12px" />
 				) : (
 					<>
 						<div></div>

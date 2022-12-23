@@ -9,14 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px;
-  border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
-  box-shadow: var(--box-shadow-desktop);
-  font-size: 1.5em;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #303030ce;
+  box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
+  font-size: 1.2em;
   transition: .7s;
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .discord{
@@ -29,26 +28,26 @@
 
 .discord:active, .linked:active{
   transform: scale(.95);
-  box-shadow: 2px 2px 0 0 var(--black-color);
+  box-shadow: 2px 2px 0 0 #2e2e2e;
 }
 
 .btn-dark-mode{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px;
-  border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
-  box-shadow: var(--box-shadow-desktop);
-  font-size: 1.5em;
-  transition: .7s;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #303030ce;
+  background-color: #FFFFFF;
+  box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
+  font-size: 1.2em;
+  transition: .3s;
   cursor: pointer;
 }
 
 .btn-dark-mode:active{
   transform: scale(.95);
-  box-shadow: 2px 2px 0 0 var(--black-color);
+  box-shadow: 2px 2px 0 0 #2e2e2e;
 }
 
 .hamburger-menu{
@@ -68,32 +67,50 @@
 }
 
 /* responsive breakpoints */
-/* for tablet view */
-@media screen and (max-width: 992px) {
+/* for desktops (large screens) */
+@media (min-width: 1025px) and (max-width: 1200px){
   .discord, .linked{
-    padding: 6px;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
   .btn-dark-mode{
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 
-/* for mobile view */
-@media screen and (max-width: 576px) {
+/* for laptops (small screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .discord, .linked{
+    font-size: 1em;
+  }
+
+  .btn-dark-mode{
+    font-size: 1em;
+  }
+}
+
+/* for tablet, iPads */
+@media (min-width: 481px) and (max-width: 768px) {
+  .discord, .linked{
+    display: none;
+  }
+
+  .btn-dark-mode{
+    font-size: 1.1em;
+  }
+
   .hamburger-menu{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3px 0;
-    padding: 9px;
-    border-radius: 5px;
-    border: var(--border-desktop);
-    background-color: var(--white-color);
-    box-shadow: var(--box-shadow-desktop);
-    transition: .7s;
+    padding: 9px 8px 9px 8px;
+    border-radius: 3px;
+    border: 1px solid #303030ce;
+    background-color: #FFFFFF;
+    box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
+    transition: .3s;
   }
 
   .hamburger-menu:hover{
@@ -102,15 +119,80 @@
 
   .hamburger-menu:active{
     transform: scale(.95);
-    box-shadow: 2px 2px 0 0 var(--black-color);
+    box-shadow: 2px 2px 0 0 #2e2e2e;
   }
 
   .hamburger-menu div{
     width: 16px;
     height: 2px;
-    background-color: var(--black-color);
+    background-color: #2e2e2e;
   }
 
+  .del-hamburger-shadow{
+    border: 1px solid #303030ce;
+    box-shadow: none;
+  }
+}
+
+/* for mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .discord, .linked{
+    display: none;
+  }
+
+  .btn-dark-mode{
+    font-size: 1.1em;
+  }
+
+  .hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px 0;
+    padding: 9px 8px 9px 8px;
+    border-radius: 3px;
+    border: 1px solid #303030ce;
+    background-color: #FFFFFF;
+    box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
+    transition: .3s;
+  }
+
+  .hamburger-menu:hover{
+    cursor: pointer;
+  }
+
+  .hamburger-menu:active{
+    transform: scale(.95);
+    box-shadow: 2px 2px 0 0 #2e2e2e;
+  }
+
+  .hamburger-menu div{
+    width: 16px;
+    height: 2px;
+    background-color: #2e2e2e;
+  }
+
+  .del-hamburger-shadow{
+    border: 1px solid #303030ce;
+    box-shadow: none;
+  }
+}
+
+/* for tablet view */
+/* @media screen and (max-width: 992px) {
+  .discord, .linked{
+    padding: 6px;
+    font-size: 1.3em;
+  }
+
+  .btn-dark-mode{
+    font-size: 1.3em;
+  }
+} */
+
+/* for mobile view */
+/* @media screen and (max-width: 576px) {
   .discord, .linked{
     display: none;
   }
@@ -123,4 +205,4 @@
     border: var(--border-desktop);
     box-shadow: none;
   }
-}
+} */
