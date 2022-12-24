@@ -5,12 +5,3 @@
 .dark-bg{
   background-color: var(--bg-dark-mode);
 }
-
-/* responsive breakpoints */
-/* for mobile view */
-@media screen and (max-width: 576px) {
-  /* .App {
-    padding-left: 10px;
-    padding-right: 10px;
-  } */
-}

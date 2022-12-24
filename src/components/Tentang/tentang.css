@@ -38,7 +38,7 @@
   background-color: #23272F;
   padding: 20px;
   margin-top: 25px;
-  color: var(--white-color);
+  color: #FFFFFF;
   border-radius: 8px;
 }
 
@@ -51,10 +51,9 @@
 .card-tentang{
   width: fit-content;
   margin: 20px auto 0 auto;
-  background-color: var(--white-color);
+  background-color: #FFFFFF;
   padding: 20px;
   border-radius: 10px;
-  color: var(--black-color);
 }
 
 .img-card{
@@ -70,7 +69,8 @@
 .card-tentang h3{
   font-size: 1.1em;
   margin-top: 10px;
-  font-weight: 600;
+  color: #1f1f1f;
+  font-weight: 500;
 }
 
 .card-tentang p{
@@ -105,15 +105,15 @@
 .wa a, .email a{
   display: flex;
   align-items: center;
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .dark-tentang h3{
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .dark-tentang-saya{
-  background-color: var(--white-color);
+  background-color: #FFFFFF;
   color: var(--black-color);
 }
 

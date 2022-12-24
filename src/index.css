@@ -1,13 +1,5 @@
 :root{
-  --white-color: #FFFFFF;
-  --black-color: #232323;
   --bg-dark-mode: #23272F;
-  --font-size-h4-desktop: 1.2em;
-  --font-size-h4-tablet: 1em;
-  --font-size-p-desktop: 1em;
-  --font-size-p-tablet: .85em;
-  --border-desktop: 1px solid #303030ce;
-  --box-shadow-desktop: 4px 4px 0 0 var(--black-color);
   --m-i: linear-gradient(#000, #000);
   --m-o: content-box, padding-box;
 }
