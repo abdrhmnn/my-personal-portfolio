@@ -56,13 +56,13 @@
 
 .del-shadow{
   border: 1px solid #555555ce;
-  background-color: var(--black-color);
-  color: var(--white-color);
+  background-color: #2e2e2e;
+  color: #FFFFFF;
   box-shadow: none;
 }
 
 .del-discord-shadow, .del-linked-shadow{
-  border: var(--border-desktop);
+  border: 1px solid #303030ce;
   box-shadow: none;
 }
 
@@ -178,31 +178,3 @@
     box-shadow: none;
   }
 }
-
-/* for tablet view */
-/* @media screen and (max-width: 992px) {
-  .discord, .linked{
-    padding: 6px;
-    font-size: 1.3em;
-  }
-
-  .btn-dark-mode{
-    font-size: 1.3em;
-  }
-} */
-
-/* for mobile view */
-/* @media screen and (max-width: 576px) {
-  .discord, .linked{
-    display: none;
-  }
-
-  .btn-dark-mode{
-    font-size: 1.2em;
-  }
-
-  .del-hamburger-shadow{
-    border: var(--border-desktop);
-    box-shadow: none;
-  }
-} */

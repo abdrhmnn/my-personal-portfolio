@@ -6,9 +6,8 @@
 .wrap-projects{
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 50px;
   padding: 40px 20px 40px 20px;
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .wrap-projects h3{
@@ -24,8 +23,9 @@
 .tabs-head{
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  gap: 0 30px;
+  gap: 0 25px;
   margin-bottom: 30px;
 }
 
@@ -35,10 +35,10 @@
   list-style: none;
   padding: 7px;
   border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
+  border: 1px solid #303030ce;
+  background-color: #FFFFFF;
   transition: .3s;
-  color: var(--black-color);
+  color: #000000;
 }
 
 .tabs-head li:active {
@@ -54,7 +54,6 @@
 .card-app{
   display: grid;
   grid-template-columns: 1fr;
-  /* flex-direction: column; */
   gap: 8px 0;
   background-color: #374151;
   padding: 20px;
@@ -75,18 +74,18 @@
   padding: 3px;
   border-radius: 10px;
   background-image: conic-gradient(
-      #488cfb,
-      #29dbbc,
-      #ddf505,
-      #ff9f0e,
-      #e440bb,
-      #655adc,
-      #488cfb
-    );
-    filter: hue-rotate(0);
-    animation: rotate-hue linear 3s infinite;
-    animation-play-state: paused;
-    -webkit-mask-image: var(--m-i), var(--m-i);
+    #488cfb,
+    #29dbbc,
+    #ddf505,
+    #ff9f0e,
+    #e440bb,
+    #655adc,
+    #488cfb
+  );
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 3s infinite;
+  animation-play-state: paused;
+  -webkit-mask-image: var(--m-i), var(--m-i);
   mask-image: var(--m-i), var(--m-i);
   -webkit-mask-origin: var(--m-o);
   mask-origin: var(--m-o);
@@ -103,7 +102,7 @@
 
 .card-app p:nth-child(3) {
   font-size: .95em;
-  line-height: 21px;
+  line-height: 25px;
   font-weight: 300;
 }
 
@@ -142,11 +141,11 @@
 }
 
 .link-app a:hover{
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .modal-content{
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .close-btn{
@@ -193,11 +192,11 @@
   border: none;
   background-color: #23272F;
   transition: .3s;
-  color: var(--white-color);
+  color: #FFFFFF;
   width: 40px;
 }
 
-.modal-desc-panel, .abdu{
+.modal-desc-panel, .continue-desain{
   width: 500px;
   height: 240px;
   padding-left: 20px;
@@ -259,10 +258,21 @@
 }
 
 /* responsive breakpoints */
-/* for tablet view */
-@media screen and (max-width: 992px) {
+/* for desktops (large screens) */
+@media (min-width: 1025px) and (max-width: 1200px){
+  .wrap-projects h3{
+    font-size: 2.7em;
+  }
+}
+
+/* for laptops (small screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrap-projects h3{
+    font-size: 2.5em;
+  }
+
   .card-app p:nth-child(2) {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   
   .card-app p:nth-child(3) {
@@ -270,19 +280,7 @@
   }
   
   .card-app p:nth-child(4) {
-    font-size: .9em;
-  }
-
-  .wrap-projects h3{
-    font-size: 2.4em;
-  }
-
-  .tabs-head{
-    font-size: .85em;
-  }
-  
-  .tabs-head li{
-    width: 100px;
+    font-size: .95em;
   }
 
   .grid-modal-content{
@@ -307,8 +305,8 @@
     width: 35px;
   }
 
-  .modal-desc-panel, .abdu{
-    width: 450px;
+  .modal-desc-panel, .continue-desain{
+    width: 550px;
     height: 180px;
     padding-left: 0;
   }
@@ -318,38 +316,112 @@
   }
 }
 
-/* for mobile view */
-@media screen and (max-width: 576px) {
+/* for tablet, iPads */
+@media (min-width: 481px) and (max-width: 768px) {
+  .wrap-projects h3{
+    font-size: 2.2em;
+  }
+
+  .tabs-head li{
+    font-size: .9em;
+  }
+
+  .card-app p:nth-child(2) {
+    font-size: 1.2em;
+  }
+  
+  .card-app p:nth-child(3) {
+    font-size: .9em;
+  }
+  
+  .card-app p:nth-child(4) {
+    font-size: .95em;
+  }
+
+  .grid-modal-content{
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-img-tech{
+    border-right: none;
+    text-align: center;
+  }
+  
+  .modal-img img{
+    width: 300px;
+  }
+
+  .modal-tech{
+    text-align: left;
+    font-size: .9em;
+  }
+  
+  .flex-img img{
+    width: 35px;
+  }
+
+  .modal-desc-panel, .continue-desain{
+    width: 400px;
+    height: 180px;
+    padding-left: 0;
+  }
+
+  .modal-desc{
+    margin-top: 15px;
+  }
+}
+
+/* for mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrap-projects h3{
+    font-size: 2em;
+  }
+
+  .tabs-head li{
+    font-size: .9em;
+  }
+
+  .card-app p:nth-child(2) {
+    font-size: 1.2em;
+  }
+  
+  .card-app p:nth-child(3) {
+    font-size: .9em;
+  }
+  
+  .card-app p:nth-child(4) {
+    font-size: .95em;
+  }
+
+  .grid-modal-content{
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-img-tech{
+    border-right: none;
+    text-align: center;
+  }
+  
   .modal-img img{
     width: 250px;
   }
 
   .modal-tech{
-    font-size: .85em;
+    text-align: left;
+    font-size: .9em;
   }
   
   .flex-img img{
-    width: 30px;
+    width: 35px;
   }
 
-  .modal-desc-panel, .abdu{
-    width: 300px;
-    height: 150px;
+  .modal-desc-panel, .continue-desain{
+    width: 270px;
+    height: 180px;
+    padding-left: 0;
   }
 
-  .modal-desc-panel{
-    padding-right: 10px;
-  }
-
-  .modal-desc-panel h3{
-    font-size: 1.1em;
-  }
-
-  .modal-desc-panel p{
-    font-size: .85em;
-  }
-
-  .abdu h2{
-    font-size: 1.2em;
+  .modal-desc{
+    margin-top: 15px;
   }
 }

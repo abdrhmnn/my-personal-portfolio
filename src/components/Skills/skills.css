@@ -23,15 +23,15 @@
   "js nodejs nodejs mysql"
   "react react material redux"
   ;
-  margin-top: 50px;
-  gap: 20px;
+  margin-top: 40px;
+  gap: 15px;
 }
 
 .wrap-js, .wrap-java, .wrap-css, .wrap-html, .wrap-material, .wrap-mysql, .wrap-nodejs, .wrap-react, .wrap-redux{
   border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
-  box-shadow: var(--box-shadow-desktop);
+  border: 1px solid #303030ce;
+  background-color: #FFFFFF;
+  box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
   transition: .3s;
   display: flex;
   align-items: center;
@@ -80,34 +80,56 @@
 }
 
 .wrap-sk-dark h3{
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .grid-sk-dark div {
-  border: var(--border-desktop);
+  border: 1px solid #303030ce;
   box-shadow: none;
 }
 
 /* responsive breakpoints */
-/* for tablet view */
-@media screen and (max-width: 992px) {
+/* for desktops (large screens) */
+@media (min-width: 1025px) and (max-width: 1200px){
   .wrap-my-skills h3{
-    font-size: 2.4em;
+    font-size: 2.7em;
   }
 
   .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
-    width: 90px;
+    width: 100px;
   }
 }
 
-/* for mobile view */
-@media screen and (max-width: 576px) {
-  .wrap-my-skills{
-    margin-top: 60px;
+/* for laptops (small screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrap-my-skills h3{
+    font-size: 2.5em;
   }
 
+  .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
+    width: 100px;
+  }
+}
+
+/* for tablet, iPads */
+@media (min-width: 481px) and (max-width: 768px) {
   .wrap-my-skills h3{
     font-size: 2.2em;
+  }
+
+  .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
+    width: 80px;
+  }
+}
+
+/* for mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrap-my-skills h3{
+    font-size: 2em;
+  }
+
+  .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
+    width: 80px;
   }
 
   .grid-skills{
@@ -124,9 +146,5 @@
     ;
     margin-top: 30px;
     gap: 20px 0;
-  }
-
-  .wrap-js img, .wrap-java img, .wrap-css img, .wrap-html img, .wrap-material img, .wrap-mysql img, .wrap-nodejs img, .wrap-react img, .wrap-redux img{
-    width: 80px;
   }
 }

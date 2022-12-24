@@ -2,7 +2,7 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 0 40px;
+  gap: 0 30px;
   padding: 0 20px 0 20px;
 }
 
@@ -15,11 +15,11 @@
 
 .jumbotron-title h2{
   font-weight: 500;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .jumbotron-title p {
-  line-height: 21px;
+  line-height: 25px;
   font-weight: 300;
 }
 
@@ -30,73 +30,72 @@
   width: fit-content;
   font-weight: 500;
   text-decoration: none;
-  color: var(--black-color);
-  padding: 7px;
+  color: #000000;
+  padding: 6px;
   border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
-  box-shadow: var(--box-shadow-desktop);
+  border: 1px solid #303030ce;
+  background-color: #FFFFFF;
+  box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
   transition: .3s;
   cursor: pointer;
 }
 
 .btn-cv:active {
   transform: scale(.95);
-  box-shadow: 2px 2px 0 0 var(--black-color);
+  box-shadow: 2px 2px 0 0 #303030ce;
 }
 
 .jumbotron-animasi{
-  width: 50%;
+  top: 30px;
   position: relative;
+  height: 500px;
 }
 
-.jumbotron-animasi .animasi-lottie{
-  transition: .3s;
+.animasi-lottie{
   width: 500px;
-  height: 500px;
 }
 
 .js, .java, .sc{
   width: 55px;
   height: 55px;
-  padding: 7px;
+  padding: 6px;
   border-radius: 5px;
-  border: var(--border-desktop);
-  background-color: var(--white-color);
-  box-shadow: var(--box-shadow-desktop);
+  border: 1px solid #303030ce;
+  background-color: #FFFFFF;
+  box-shadow: 3.5px 3.5px 0 0 #2e2e2e;
 }
 
 .js{
   position: absolute;
-  top: 100px;
-  left: 120px;
-  animation: bounce 2s linear infinite;
+  top: 70px;
+  left: 130px;
+  animation: bounce-js 2s linear infinite;
 }
 
-.java{
+/* .java{
   position: absolute;
   top: 140px;
   right: 100px;
-  animation: bounce2 2s linear infinite;
-}
+  animation: bounce-java 2s linear infinite;
+} */
 
 .sc{
   position: absolute;
   top: 200px;
   left: 50px;
-  animation: bounce3 2s linear infinite;
+  animation: bounce-sc 2s linear infinite;
 }
 
 .jumbotron-dark-mode{
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .btn-dark-jumbotron{
-  border: var(--border-desktop);
+  border: 1px solid #303030ce;
   box-shadow: none;
 }
 
-@keyframes bounce {
+@keyframes bounce-js {
   0%, 100% {
     transform: translateY(0);
   }
@@ -105,16 +104,16 @@
   }
 }
 
-@keyframes bounce2 {
+/* @keyframes bounce-java {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-30px);
   }
-}
+} */
 
-@keyframes bounce3 {
+@keyframes bounce-sc {
   0%, 100% {
     transform: translateY(0);
   }
@@ -124,68 +123,109 @@
 }
 
 /* responsive breakpoints */
-/* for tablet view */
-@media screen and (max-width: 992px) {
+/* for desktops (large screens) */
+@media (min-width: 1025px) and (max-width: 1200px){
   .wrap-jumbotron{
-    gap: 0 20px;
-  }
-
-  .jumbotron-animasi .animasi-lottie{
-    width: 300px;
-    height: 300px;
-  }
-
-  .js, .java, .sc{
-    width: 40px;
-    height: 40px;
-  }
-
-  .js{
-    top: 50px;
-    left: 80px;
-  }
-
-  .java{
-    top: 120px;
-    right: 30px;
-  }
-
-  .sc{
-    top: 130px;
-    left: 20px;
+    gap: 0 10px;
   }
 
   .jumbotron-title h2{
-    font-weight: 500;
-    font-size: 2em;
+    font-size: 2.6em;
   }
-  
-  .jumbotron-title p {
-    font-size: var(--font-size-p-tablet);
-    font-weight: 300;
+
+  .jumbotron-animasi{
+    top: 40px;
   }
-  
-  .btn-cv{
-    font-size: var(--font-size-p-tablet);
+
+  .animasi-lottie{
+    width: 450px;
+  }
+
+  .js, .java, .sc{
+    width: 50px;
+    height: 50px;
   }
 }
 
-/* for mobile view */
-@media screen and (max-width: 576px) {
+/* for laptops (small screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrap-jumbotron{
+    gap: 0 10px;
+  }
+
+  .jumbotron-title h2{
+    font-size: 2.3em;
+  }
+
+  .jumbotron-animasi{
+    top: 55px;
+  }
+
+  .animasi-lottie{
+    width: 420px;
+  }
+
+  .js{
+    top: 60px;
+    left: 130px;
+  }
+
+  .sc{
+    top: 165px;
+  }
+
+  .js, .java, .sc{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* for tablet, iPads */
+@media (min-width: 481px) and (max-width: 768px) {
+  .jumbotron-title h2{
+    font-size: 2em;
+  }
+
   .jumbotron-animasi{
     display: none;
   }
 
-  .wrap-jumbotron{
-    gap: 0 0;
-  }
-  
   .jumbotron-title{
-    margin-top: 50px;
+    gap: 10px 0;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    text-align: center;
+    align-items: center;
   }
-  
+
+  .btn-cv{
+    margin-top: 20px;
+  }
+}
+
+/* for mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
   .jumbotron-title h2{
-    font-weight: 500;
-    font-size: 2em;
+    font-size: 1.8em;
+  }
+
+  .jumbotron-title p {
+    font-size: .9em;
+  }
+
+  .jumbotron-title{
+    gap: 10px 0;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .jumbotron-animasi{
+    display: none;
+  }
+
+  .btn-cv{
+    margin-top: 20px;
   }
 }

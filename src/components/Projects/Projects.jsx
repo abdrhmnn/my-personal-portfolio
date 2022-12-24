@@ -263,7 +263,7 @@ export default function Projects({ toggleDarkMode }) {
 
 																		{createDeskripsiModal(e)}
 																		<TabPanel>
-																			<div className="abdu">
+																			<div className="continue-desain">
 																				<h2>Still doesn't work! 🐱‍💻</h2>
 																			</div>
 																		</TabPanel>
