@@ -43,7 +43,7 @@
 }
 
 .tentang-saya p {
-  line-height: 23px;
+  line-height: 25px;
   font-weight: 300;
   font-size: 1.1em;
 }
@@ -130,16 +130,30 @@
 }
 
 /* responsive breakpoints */
-/* for tablet view */
-@media screen and (max-width: 992px) {
+/* for desktops (large screens) */
+@media (min-width: 1025px) and (max-width: 1200px){
   .wrap-tentang h3:nth-child(1){
-    font-size: 2.4em;
+    font-size: 2.7em;
   }
 }
 
-/* for mobile view */
-@media screen and (max-width: 576px) {
+/* for laptops (small screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrap-tentang h3:nth-child(1){
+    font-size: 2.5em;
+  }
+}
+
+/* for tablet, iPads */
+@media (min-width: 481px) and (max-width: 768px) {
   .wrap-tentang h3:nth-child(1){
     font-size: 2.2em;
+  }
+}
+
+/* for mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrap-tentang h3:nth-child(1){
+    font-size: 2em;
   }
 }
